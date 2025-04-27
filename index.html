@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Tic Tac Toe By shukan Patel </title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<body>
+
+  <h1>Tic Tac Toe By Shukan </h1>
+
+  <div class="mode-buttons">
+    <button onclick="startGame(3)">3x3 (2 Players)</button>
+    <button onclick="startGame(4)">4x4 (3 Players)</button>
+    <button onclick="startGame(5)">5x5 (4 Players)</button>
+  </div>
+
+  <div id="turn"></div>
+
+  <div id="grid" class="grid"></div>
+
+  <button id="restart" onclick="restartGame()" style="display: none;">Restart</button>
+
+  <div id="winner"></div>
+
+  <!-- Winner Modal -->
+  <div id="winnerModal" class="modal">
+    <div class="modal-content">
+      <div class="confetti" id="confetti"></div>
+      <h2 id="winnerMessage" class="congrats-text"></h2>
+      <button id="closeModal" class="btn">Close</button> <!-- Close Button -->
+      <button onclick="restartGame()" class="btn">Play Again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
